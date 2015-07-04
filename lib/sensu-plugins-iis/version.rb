@@ -1,4 +1,4 @@
-module SensuPluginsIis
+module SensuPluginsIIS
   module Version
     MAJOR = 0
     MINOR = 0
