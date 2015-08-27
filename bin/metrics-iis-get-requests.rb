@@ -40,7 +40,7 @@ class IisGetRequests < Sensu::Plugin::Metric::CLI::Graphite
          short: '-s sitename',
          default: '_Total'
 
-  def run # rubocop:disable all
+  def run
     io = IO.popen("typeperf -sc 1 \"Web Service(#{config[:site]})\\Get\ Requests\/sec\"")
     get_requests = io.readlines[2].split(',')[1].gsub(/"/, '').to_f
 
